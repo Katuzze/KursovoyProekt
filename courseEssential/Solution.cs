@@ -35,7 +35,7 @@ namespace courseEssential
             switch(Result)
             {
                 case result.twoResult:
-                    return $"x1 = {x1}, x2 = {x2}";
+                    return $"x₁ = {x1} \nx₂ = {x2}";
                 case result.oneResult:
                     return $"x = {x1}";
                 default:

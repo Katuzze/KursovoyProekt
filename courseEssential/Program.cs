@@ -13,20 +13,29 @@ namespace courseEssential
             Console.OutputEncoding = Encoding.Unicode;
             Console.InputEncoding = Encoding.Unicode;
 
-            Console.WriteLine("квадратне рівняння: ax² + bx + c = 0");
-            Console.WriteLine("Введіть значення a");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("квадратне рівняння");
+            Console.WriteLine("ax² + bx + c = 0");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━");
+            Console.ResetColor();
+            Console.Write("Введіть значення a: ");
             double num1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введіть значення b");
+            Console.Write("Введіть значення b: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введіть значення c");
+            Console.Write("Введіть значення c: ");
             double num3 = Convert.ToDouble(Console.ReadLine());
 
             Task task = new Task(num1, num2, num3);
             Solver solver = new Solver(task);
             Solution solution = solver.Solve();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(solution);
+            Console.ResetColor();
 
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }
