@@ -31,7 +31,7 @@ namespace courseEssential
             Solution solution = solver.Solve();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━");
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine(solution);
             Console.ResetColor();
 

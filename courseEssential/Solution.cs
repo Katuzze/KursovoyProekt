@@ -10,22 +10,22 @@ namespace courseEssential
     {
         public double x1;
         public double x2;
-        public result Result;
+        public Result Result;
 
-        public Solution(double x1, double x2, result result)
+        public Solution(double x1, double x2, Result result)
         {
             this.x1 = x1;
             this.x2 = x2;
             this.Result = result;
         }
 
-        public Solution(double x1, result result)
+        public Solution(double x1, Result result)
         {
             this.x1 = x1;
             this.Result = result;
         }
 
-        public Solution(result result)
+        public Solution(Result result)
         {
             this.Result = result;
         }
@@ -34,20 +34,13 @@ namespace courseEssential
         {
             switch(Result)
             {
-                case result.twoResult:
+                case Result.twoResult:
                     return $"x₁ = {x1} \nx₂ = {x2}";
-                case result.oneResult:
+                case Result.oneResult:
                     return $"x = {x1}";
                 default:
                     return "Немає розв'язків";
             }
-        }
-
-        public enum result
-        {
-            oneResult,
-            twoResult,
-            noResult,
         }
     }
 }

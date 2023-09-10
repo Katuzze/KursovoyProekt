@@ -28,16 +28,16 @@ namespace courseEssential
             {
                 double x1 = (-task.B + Math.Sqrt(discriminant)) / (2 * task.A);
                 double x2 = (-task.B - Math.Sqrt(discriminant)) / (2 * task.A);
-                return new Solution(x1, x2, Solution.result.twoResult);
+                return new Solution(x1, x2, Result.twoResult);
             }
             else if (discriminant == 0)
             {
                 double x1 = -task.B / (2 * task.A);
-                return new Solution(x1, Solution.result.oneResult);
+                return new Solution(x1, Result.oneResult);
             }
             else
             {
-                return new Solution(Solution.result.noResult);
+                return new Solution(Result.noResult);
             }
         }
     }
