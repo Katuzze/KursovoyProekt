@@ -26,13 +26,12 @@ namespace courseEssential
             Console.Write("Введіть значення c: ");
             double num3 = Convert.ToDouble(Console.ReadLine());
 
-            Condition condition = new Condition(num1, num2, num3);
-            Solver solver = new Solver(condition);
-            Solution solution = solver.Solve();
+
+            Solver solver = new Solver(new Condition(num1, num2, num3));
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine(solution);
+            Console.WriteLine(solver.Solve());
             Console.ResetColor();
 
             Console.ReadLine();
