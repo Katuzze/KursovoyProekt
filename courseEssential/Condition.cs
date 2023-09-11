@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace courseEssential
 {
-    class Condition
+    struct Condition
     {
         public double A { get; set; }
         public double B { get; set; }
