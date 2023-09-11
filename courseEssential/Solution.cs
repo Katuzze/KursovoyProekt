@@ -8,24 +8,24 @@ namespace courseEssential
 {
     class Solution
     {
-        public double x1;
-        public double x2;
-        public Result Result;
+        public readonly double X1;
+        public readonly double X2;
+        public ResultMessage Result;
 
-        public Solution(double x1, double x2, Result result)
+        public Solution(double x1, double x2, ResultMessage result)
         {
-            this.x1 = x1;
-            this.x2 = x2;
+            this.X1 = x1;
+            this.X2 = x2;
             this.Result = result;
         }
 
-        public Solution(double x1, Result result)
+        public Solution(double x1, ResultMessage result)
         {
-            this.x1 = x1;
+            this.X1 = x1;
             this.Result = result;
         }
 
-        public Solution(Result result)
+        public Solution(ResultMessage result)
         {
             this.Result = result;
         }
@@ -34,10 +34,10 @@ namespace courseEssential
         {
             switch(Result)
             {
-                case Result.twoResult:
-                    return $"x₁ = {x1} \nx₂ = {x2}";
-                case Result.oneResult:
-                    return $"x = {x1}";
+                case ResultMessage.TwoResult:
+                    return $"x₁ = {X1} \nx₂ = {X2}";
+                case ResultMessage.OneResult:
+                    return $"x = {X1}";
                 default:
                     return "Немає розв'язків";
             }
