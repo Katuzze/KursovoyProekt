@@ -8,16 +8,16 @@ namespace courseEssential
 {
     class Solver
     {
-        private Task task;
+        private readonly Condition condition;
 
-        public Solver(Task task)
+        public Solver(Condition condition)
         {
-            this.task = task;
+            this.condition = condition;
         }
 
         private double CalculateDiscriminant()
         {
-            return Math.Pow(task.B, 2) - 4 * task.A * task.C;
+            return Math.Pow(condition.B, 2) - 4 * condition.A * condition.C;
         }
 
         public Solution Solve()
@@ -26,18 +26,18 @@ namespace courseEssential
 
             if (discriminant > 0)
             {
-                double x1 = (-task.B + Math.Sqrt(discriminant)) / (2 * task.A);
-                double x2 = (-task.B - Math.Sqrt(discriminant)) / (2 * task.A);
-                return new Solution(x1, x2, ResultMessage.TwoResult);
+                double x1 = (-condition.B + Math.Sqrt(discriminant)) / (2 * condition.A);
+                double x2 = (-condition.B - Math.Sqrt(discriminant)) / (2 * condition.A);
+                return new Solution(x1, x2, resultMessage.TwoResult);
             }
             else if (discriminant == 0)
             {
-                double x1 = -task.B / (2 * task.A);
-                return new Solution(x1, ResultMessage.OneResult);
+                double x1 = -condition.B / (2 * condition.A);
+                return new Solution(x1, resultMessage.OneResult);
             }
             else
             {
-                return new Solution(ResultMessage.NoResult);
+                return new Solution(resultMessage.NoResult);
             }
         }
     }

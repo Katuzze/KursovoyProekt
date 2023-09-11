@@ -26,8 +26,8 @@ namespace courseEssential
             Console.Write("Введіть значення c: ");
             double num3 = Convert.ToDouble(Console.ReadLine());
 
-            Task task = new Task(num1, num2, num3);
-            Solver solver = new Solver(task);
+            Condition condition = new Condition(num1, num2, num3);
+            Solver solver = new Solver(condition);
             Solution solution = solver.Solve();
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━");

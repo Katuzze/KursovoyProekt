@@ -8,35 +8,35 @@ namespace courseEssential
 {
     class Solution
     {
-        public readonly double X1;
-        public readonly double X2;
-        public ResultMessage Result;
+        public double X1 { get; }
+        public double X2 { get; }
+        public resultMessage Result { get; }
 
-        public Solution(double x1, double x2, ResultMessage result)
+        public Solution(double x1, double x2, resultMessage result)
         {
-            this.X1 = x1;
-            this.X2 = x2;
-            this.Result = result;
+            X1 = x1;
+            X2 = x2;
+            Result = result;
         }
 
-        public Solution(double x1, ResultMessage result)
+        public Solution(double x1, resultMessage result)
         {
-            this.X1 = x1;
-            this.Result = result;
+            X1 = x1;
+            Result = result;
         }
 
-        public Solution(ResultMessage result)
+        public Solution(resultMessage result)
         {
-            this.Result = result;
+            Result = result;
         }
 
         public override string ToString()
         {
             switch(Result)
             {
-                case ResultMessage.TwoResult:
+                case resultMessage.TwoResult:
                     return $"x₁ = {X1} \nx₂ = {X2}";
-                case ResultMessage.OneResult:
+                case resultMessage.OneResult:
                     return $"x = {X1}";
                 default:
                     return "Немає розв'язків";

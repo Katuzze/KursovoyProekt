@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace courseEssential
 {
-    class Task
+    class Condition
     {
         public double A { get; set; }
         public double B { get; set; }
         public double C { get; set; }
 
-        public Task(double a, double b, double c)
+        public Condition(double a, double b, double c)
         {
             A = a;
             B = b;

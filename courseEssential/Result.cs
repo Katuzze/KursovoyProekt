@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace courseEssential
 {
-    public enum ResultMessage
+    public enum resultMessage
     {
         OneResult,
         TwoResult,
